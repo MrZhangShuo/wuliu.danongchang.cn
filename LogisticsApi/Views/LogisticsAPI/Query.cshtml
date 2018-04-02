@@ -1,0 +1,7 @@
+﻿@using Logistics.Entity;
+
+@{
+    Layout = null;
+    ExpressData ExpressData = (ExpressData)ViewBag.ExpressData;
+    Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(ExpressData));
+}
