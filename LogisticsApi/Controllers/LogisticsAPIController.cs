@@ -25,7 +25,7 @@ namespace Logistics.Web.Controllers
             //Para.type = "SFEXPRESS";
             //Para.no = "964384723706";
             //Para.AppCode = "42b6f1042f8945d78ca59be867a39f5a";
-            //new FuQingService().Service(Para);   
+            //new FuQingService().Service(Para); 
 
             //易源测试
             //Logistics.Entity.AliYiYuan.Config.GetPara Para = new Logistics.Entity.AliYiYuan.Config.GetPara();
