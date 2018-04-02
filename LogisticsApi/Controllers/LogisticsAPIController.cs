@@ -25,7 +25,7 @@ namespace Logistics.Web.Controllers
             //Para.type = "SFEXPRESS";
             //Para.no = "964384723706";
             //Para.AppCode = "42b6f1042f8945d78ca59be867a39f5a";
-            //new FuQingService().Service(Para); 
+            //new FuQingService().Service(Para);  
 
             //易源测试
             //Logistics.Entity.AliYiYuan.Config.GetPara Para = new Logistics.Entity.AliYiYuan.Config.GetPara();
@@ -114,6 +114,10 @@ namespace Logistics.Web.Controllers
                     //写库 根据isNewItem值判断是新增还是修改
                     DataCMD.AddorUp_WuliuMess(ExpressData.number, ExpressData.type, ExpressData.Status, ExpressData.date, jsoncontent, ExpressData.ApiName,isNewItem);
                 }
+                //HttpRuntime缓存
+                //List<CacheCode> list = HttpRuntime.Cache.Get("CacheCode") as List<CacheCode>;
+                //HttpRuntime.Cache.Insert();
+                //MemoryCache缓存
                 theManagerCache.CacheService.Set(LogisticPara.logisticsCode, ExpressData, 60 * 20, 2);
             }
             ViewBag.ExpressData = theManagerCache.CacheService.Get<object>(LogisticPara.logisticsCode);
